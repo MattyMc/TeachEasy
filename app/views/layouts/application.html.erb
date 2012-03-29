@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class='navbar navbar-fixed-top'>
+		<div class='navbar-inner'>
+			<div class='container-fluid'>
+				<ul class='nav'>
+					<li><a href="#">First Thing</a></li>
+					<li><a href="#">Second Thing</a></li>
+					<li><a href="#">Third Thing</a></li>
+					<li><a href="#">Fourth Thing</a></li>
+				</ul>
+			</div>
+		</div>
+	<div>
+		
+	<div class="container-fluid">
+		<div class="span10">
+			
+			<%= yield :main %>
+			
+		</div>
+		<div class="span2">
+			<%= yield :side_bar %>
+		</div>
+		</div>
+		</div>
+	</div>
 </body>
 </html>
