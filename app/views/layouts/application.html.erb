@@ -25,6 +25,11 @@
 			
 			<%= yield :main %>
 			
+			<%= form_for @teachable do |f| %>
+			<%= f.text_field :content %>
+			<%= f.submit %>
+			<% end %>
+		
 		</div>
 		<div class="span2">
 			<%= yield :side_bar %>
