@@ -1,18 +1,28 @@
 <% content_for :main do %>
-<h1>Pages#home</h1>
-<%= @message %>
-<br>
+  <h1>Pages#home</h1>
+  <%= @message %>
+  <br>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus eros, pulvinar sit amet dapibus ac, pharetra vitae lectus. Quisque volutpat eleifend mollis. In aliquet, ligula quis porta pharetra, felis risus varius nulla, in lobortis magna mauris vel nibh. Vestibulum dapibus condimentum ligula, non scelerisque neque sodales et. Suspendisse imperdiet feugiat interdum. Cras molestie sollicitudin imperdiet. Vestibulum tincidunt justo sed augue imperdiet cursus. Nulla volutpat, nisl at hendrerit imperdiet, mi augue porttitor ante, commodo feugiat quam sem vehicula velit. Ut ultrices elementum molestie. Aliquam in quam massa, id aliquam sapien.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus eros, pulvinar sit amet dapibus ac, pharetra vitae lectus. Quisque volutpat eleifend mollis. In aliquet, ligula quis porta pharetra, felis risus varius nulla, in lobortis magna mauris vel nibh. Vestibulum dapibus condimentum ligula, non scelerisque neque sodales et. Suspendisse imperdiet feugiat interdum. Cras molestie sollicitudin imperdiet. Vestibulum tincidunt justo sed augue imperdiet cursus. Nulla volutpat, nisl at hendrerit imperdiet, mi augue porttitor ante, commodo feugiat quam sem vehicula velit. Ut ultrices elementum molestie. Aliquam in quam massa, id aliquam sapien.</p>
 
-<% end %>
+  <% @last_20_teachables.each do |t| %>
+	
+	<% if t.content then %>
+	<%= t.content %>
+	<br>
+	<% else %>
+	<% t.content %>
+	<% end %>
+	
+    <% end %>
 
-<% content_for :side_bar do %>
+   
 
-<h2>Sidebar title</h2>
-this is written directly into application.html.erb
+    <% end %>
+    <% content_for :side_bar do %>
+
+      <h2>Sidebar title</h2>
+      this is written directly into application.html.erb
 
 
-
-
-<% end %>
+      <% end %>
