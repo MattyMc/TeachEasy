@@ -1,0 +1,4 @@
+<!-- DYNAMICALLY INSERTING CONTENT INTO NEWSFEED -->
+
+$("#teachables-list").append("<div id='teachable-<%= @teachable.id %>'><%= @teachable.content %></div>");
+$("#teachables-list div:visible:first").hide(500);

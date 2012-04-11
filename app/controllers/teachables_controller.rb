@@ -8,7 +8,13 @@ def create
   if @teachable.save then
     @test = "YES"
   end
-  redirect_to :back
+  
+  respond_to do |format|
+    format.html #wtf does this do?
+    format.js
+  end
+  
+  #redirect_to :back
 end
 
 

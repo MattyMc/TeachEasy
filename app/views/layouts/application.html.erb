@@ -25,7 +25,7 @@
 			
 			<%= yield :main %>
 			
-			<%= form_for @teachable do |f| %>
+			<%= form_for @teachable, :remote=>true do |f| %>
 			<%= f.text_field :content %>
 			<%= f.submit %>
 			<% end %>
