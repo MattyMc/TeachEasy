@@ -1,4 +1,4 @@
 <!-- DYNAMICALLY INSERTING CONTENT INTO NEWSFEED -->
 
-$("#teachables-list").append("<div id='teachable-<%= @teachable.id %>'><%= @teachable.content %></div>");
-$("#teachables-list div:visible:first").hide(500);
+$("#teachables-list div:visible:last").hide(1000);
+$("#teachables-list").prepend("<div id='teachable-<%= @teachable.id %>'><%= @teachable.content %></div>");

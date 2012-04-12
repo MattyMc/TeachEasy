@@ -23,12 +23,11 @@
 	<div class="container-fluid">
 		<div class="span10">
 			
+			
 			<%= yield :main %>
 			
-			<%= form_for @teachable, :remote=>true do |f| %>
-			<%= f.text_field :content %>
-			<%= f.submit %>
-			<% end %>
+			
+		
 		
 		</div>
 		<div class="span2">
