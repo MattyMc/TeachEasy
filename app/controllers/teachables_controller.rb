@@ -17,5 +17,18 @@ def create
   #redirect_to :back
 end
 
+def teachable_dropped
+  @teachid = params[:drag_id].gsub("teachable-","").to_i
+  
+  @teachable_dropped = Teachable.find(@teachid).content
+  
+  
+  respond_to do |format| 
+    format.js
+  end
+  
+  
+end
+
 
 end

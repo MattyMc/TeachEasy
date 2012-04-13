@@ -3,7 +3,10 @@
 
 function applyDragDrop() {
 $(document).ready(function() {
+	//Make all teachables draggable
 	$(".teachable").draggable({ revert: true });
+	
+	//Make the box droppable
 	$( "#dropbox" ).droppable({
 				accept: ".teachable",
 				activeClass: "ui-state-hover",
@@ -12,7 +15,11 @@ $(document).ready(function() {
 				},
 				tolerance: "pointer",
 				drop: function( event, ui ) {
-					alert("worked!");
+					alert("Got the drop, here's your money fucker!");
+					//HERE IS WHERE I UPDATE THE DISPLAY CONTAINER
+					$("#dropbox").load("teachables/teachable_dropped", {
+						drag_id: $(ui.draggable).attr("id")
+					});
 				}
 			});
 })

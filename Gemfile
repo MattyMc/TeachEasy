@@ -7,7 +7,8 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 
-gem 'pg'
+#I was supposed to install the below GEM to work with Heroku - didn't work
+#gem 'pg'
 
 
 # Gems used only for assets and not required

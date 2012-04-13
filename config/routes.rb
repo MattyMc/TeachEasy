@@ -2,6 +2,7 @@ Teacheasy::Application.routes.draw do
   root :to => "pages#home"
   
   match 'teachables' => 'teachables#create'
+  match 'teachables/teachable_dropped' => 'teachables#teachable_dropped'
   resources :teachables
   
   # The priority is based upon order of creation:

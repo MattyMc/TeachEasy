@@ -6,5 +6,6 @@ class PagesController < ApplicationController
     @last_20_teachables = Teachable.last(20).reverse
   end
 
+  
 
 end
