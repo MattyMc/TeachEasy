@@ -1,0 +1,21 @@
+//DEBUG MODE
+//ActionView::Base.debug_rjs = true
+
+function applyDragDrop() {
+$(document).ready(function() {
+	$(".teachable").draggable({ revert: true });
+	$( "#dropbox" ).droppable({
+				accept: ".teachable",
+				activeClass: "ui-state-hover",
+				activate: function(event, ui) {
+					$("#dropbox").effect("bounce");
+				},
+				tolerance: "pointer",
+				drop: function( event, ui ) {
+					alert("worked!");
+				}
+			});
+})
+};
+
+applyDragDrop();

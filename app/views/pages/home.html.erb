@@ -15,8 +15,8 @@
   <% @last_20_teachables.each do |t| %>
 	
 	<% if t.content then %>
-	<div id='teachable-<%= t.id %>'>
-	<%= t.content %>
+	<div id='teachable-<%= t.id %>' class="teachable">
+	<strong><%= t.content %></strong> | Associated with week: <%= t.week %>
 	</div>
 	<% else %>
 
@@ -31,7 +31,9 @@
     <% content_for :side_bar do %>
 
       <h2>Sidebar title</h2>
-      this is written directly into application.html.erb
+      Here's a giant dropbox:
+		<br> 
+	<div id="dropbox"></div>
 
 
       <% end %>
