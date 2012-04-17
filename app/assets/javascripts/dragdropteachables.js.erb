@@ -4,22 +4,23 @@
 function applyDragDrop() {
 $(document).ready(function() {
 	//Make all teachables draggable
-	$(".teachable").draggable({ revert: true });
+	$(".teachable").draggable({ revert: true, handle: "a.embed" });
 	
-	//Make the box droppable
-	$( "#dropbox" ).droppable({
+	//Make the boxes droppable
+	$( ".dropbox" ).droppable({
 				accept: ".teachable",
 				activeClass: "ui-state-hover",
 				activate: function(event, ui) {
-					$("#dropbox").effect("bounce");
+					$(".teachable-inner").css("background", "white");
+					//$(".teachable-inner").css("color", "white");
+					$(".top-right").css("background", "white");
 				},
 				tolerance: "pointer",
 				drop: function( event, ui ) {
-					alert("Got the drop, here's your money fucker!");
 					//HERE IS WHERE I UPDATE THE DISPLAY CONTAINER
-					$("#dropbox").load("teachables/teachable_dropped", {
-						drag_id: $(ui.draggable).attr("id")
-					});
+					$(this).load("teachables/teachable_dropped", 
+					{drag_id: $(ui.draggable).attr("id"),
+					 drop_id: $(this).attr("id")});
 				}
 			});
 })

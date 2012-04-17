@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Teacheasy</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Teacheasy</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 	<div class='navbar navbar-fixed-top'>
 		<div class='navbar-inner'>
-			<div class='container-fluid'>
+			<div class='container'>
 				<ul class='nav'>
 					<li><a href="#">First Thing</a></li>
 					<li><a href="#">Second Thing</a></li>
@@ -18,23 +18,25 @@
 				</ul>
 			</div>
 		</div>
-	<div>
-		
-	<div class="container-fluid">
-		<div class="span10">
-			
-			
-			<%= yield :main %>
-			
-			
-		
-		
-		</div>
-		<div class="span2">
-			<%= yield :side_bar %>
-		</div>
-		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="span9">
+
+				
+				<%= yield :main %>
+
+
+
+
+			</div>
+			<div class="span3 sidebar">
+				<%= yield :side_bar %>
+			</div>
 		</div>
 	</div>
+</div>
+</div>
 </body>
 </html>

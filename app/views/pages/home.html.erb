@@ -1,39 +1,31 @@
 <% content_for :main do %>
-  <h1>Pages#home</h1>
-  <%= @message %>
-  <br>
+<h1>Pages#home</h1>
+<%= @message %>
+<br>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus eros, pulvinar sit amet dapibus ac, pharetra vitae lectus. Quisque volutpat eleifend mollis. In aliquet, ligula quis porta pharetra, felis risus varius nulla, in lobortis magna mauris vel nibh. Vestibulum dapibus condimentum ligula, non scelerisque neque sodales et. Suspendisse imperdiet feugiat interdum. Cras molestie sollicitudin imperdiet. Vestibulum tincidunt justo sed augue imperdiet cursus. Nulla volutpat, nisl at hendrerit imperdiet, mi augue porttitor ante, commodo feugiat quam sem vehicula velit. Ut ultrices elementum molestie. Aliquam in quam massa, id aliquam sapien.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus eros, pulvinar sit amet dapibus ac, pharetra vitae lectus. Quisque volutpat eleifend mollis. In aliquet, ligula quis porta pharetra, felis risus varius nulla, in lobortis magna mauris vel nibh. Vestibulum dapibus condimentum ligula, non scelerisque neque sodales et. Suspendisse imperdiet feugiat interdum. Cras molestie sollicitudin imperdiet. Vestibulum tincidunt justo sed augue imperdiet cursus. Nulla volutpat, nisl at hendrerit imperdiet, mi augue porttitor ante, commodo feugiat quam sem vehicula velit. Ut ultrices elementum molestie. Aliquam in quam massa, id aliquam sapien.</p>
 
-	<%= form_for @teachable, :remote=>true do |f| %>
-	<%= f.text_field :content %>
-	<%= f.submit %>
-	<% end %>
-
+<%= form_for @teachable, :remote=>true do |f| %>
+<%= f.text_field :content %>
+<%= f.submit %>
+<% end %>
 
 <div id="teachables-list">
-  <% @last_20_teachables.each do |t| %>
-	
-	<% if t.content then %>
-	<div id='teachable-<%= t.id %>' class="teachable">
-	<strong><%= t.content %></strong> | Associated with week: <%= t.week %>
-	</div>
-	<% else %>
-
-	<% end %>
-
-    <% end %>
-
+	<%= render @last_20_teachables %>
 </div>
-    <% end %>
+
+<% end %><!--CONTENT FOR MAIN ENDS HERE-->
 
 
-    <% content_for :side_bar do %>
+<% content_for :side_bar do %>
 
-      <h2>Sidebar title</h2>
-      Here's a giant dropbox:
-		<br> 
-	<div id="dropbox"></div>
+<h2>Sidebar title</h2>
+Here's a giant dropbox:
+<br> 
+<div class="dropbox" id="week-1">Week #1</div><br/>
+<div class="dropbox" id="week-2">Week #2</div><br/>
+<div class="dropbox" id="week-3">Week #3</div><br/>
+<div class="dropbox" id="week-4">Week #4</div><br/>
+<div class="dropbox" id="week-5">Week #5</div><br/>
 
-
-      <% end %>
+<% end %>

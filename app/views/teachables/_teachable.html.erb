@@ -1,0 +1,44 @@
+
+
+
+	<% if teachable then %>
+
+	<div class="teachable-outter">
+
+		<div id='teachable-<%= teachable.id %>' class="teachable span8">
+			<!--THIS IS THE TABS ON TOP-->
+			<div class="teachable-tabs row">
+				<div class="embed btn">Embed!</div>
+			</div>
+			
+			
+			<!--THIS IS THE MAIN BODY OF A TEACHABLE-->
+			<div class="row teachable-inner">
+				<div class="span left-column">
+					<%= image_tag "50x50.gif" %>
+				</div>
+				<div class="offset1 middle-column">	
+					<div class="name">
+						<strong>Matt McInnis</strong>
+					</div>
+					
+					<div class="content">
+						<%= teachable.content %> | Associated with week: <%= teachable.week_id %>
+					</div>
+					<div>
+						<em>Share | Comment | <%= teachable.created_at %></em>
+					</div>
+
+				</div>
+			
+			</div>	
+		</div>
+
+	</div>
+
+
+
+	<% else %>
+
+	<% end %>
+

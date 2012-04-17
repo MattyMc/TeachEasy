@@ -1,3 +1,57 @@
 // Place all the styles related to the Teachables controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.teachable-inner {
+	padding: 7px 2px 3px 3px;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+	border-radius: 4px 0px 4px 4px;
+	border-color: #DDDDDD #DDDDDD #DDDDDD #DDDDDD;
+	
+	.left-column{
+		position: relative;
+		left: -15px;
+	}
+	
+	.middle-column{
+		position: relative;
+		left: -36px;
+	}
+	
+}
+
+.embed {
+	float: right;
+	border-left: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 0px solid #DDDDDD;
+	border-radius: 4px 4px 0px 0px;
+	box-shadow: 0px 2px 0px -1px white;
+	padding: 4px 6px 4px 6px;
+	letter-spacing: 1px;
+	background: white;
+}
+
+
+.embed:hover {
+	background: white;
+	font-weight: bold;
+	box-shadow: 0px 2px 0px -1px white;
+}
+
+.name {
+	padding-bottom: 5px;
+}
+
+.content {
+	padding-bottom: 5px;
+}
+
+.gray {
+	background: gray;
+}
+
+.blue {
+	background: gray;
+}

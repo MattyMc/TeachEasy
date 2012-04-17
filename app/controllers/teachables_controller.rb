@@ -18,9 +18,16 @@ def create
 end
 
 def teachable_dropped
-  @teachid = params[:drag_id].gsub("teachable-","").to_i
+  @teach_id = params[:drag_id].gsub("teachable-","").to_i
+  @week_id = params[:drop_id].gsub("week-","").to_i
+  #
   
-  @teachable_dropped = Teachable.find(@teachid).content
+  @teachable_dropped = Teachable.find(@teach_id)
+  Rails.logger.debug "!!!!! THE OBJECT IS #{@teach_id.class} \n"  
+  
+  @teachable_dropped.week_id = @week_id
+  @teachable_dropped.save
+  
   
   
   respond_to do |format| 

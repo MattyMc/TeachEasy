@@ -1,0 +1,48 @@
+<div id="teachables-list">
+
+	<% @last_20_teachables.each do |t| %>
+
+	<% if t.content then %>
+
+	<div class="teachable-outter">
+
+		<div id='teachable-<%= t.id %>' class="teachable span8">
+			<!--THIS IS THE TABS ON TOP-->
+			<div class="teachable-tabs row">
+				<div class="embed btn">Embed!</div>
+			</div>
+			
+			
+			<!--THIS IS THE MAIN BODY OF A TEACHABLE-->
+			<div class="row teachable-inner">
+				<div class="span left-column">
+					<%= image_tag "50x50.gif" %>
+				</div>
+				<div class="offset1 middle-column">	
+					<div class="name">
+						<strong>Matt McInnis</strong>
+					</div>
+					
+					<div class="content">
+						<%= t.content %> | Associated with week: <%= t.week_id %>
+					</div>
+					<div>
+						<em>Share | Comment | <%= t.created_at %></em>
+					</div>
+
+				</div>
+			
+			</div>	
+		</div>
+
+	</div>
+
+
+
+	<% else %>
+
+	<% end %>
+
+	<% end %><!--TEACHABLES LIST ENDS HERE-->
+
+</div>
