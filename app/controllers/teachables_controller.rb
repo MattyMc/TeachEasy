@@ -7,12 +7,15 @@ def create
   
   if @teachable.save then
     @test = "YES"
+    
+    respond_to do |format| #format takes on the action name! (it seems?)
+      format.html #wtf does this do?
+      format.js
+    end
+    
   end
   
-  respond_to do |format|
-    format.html #wtf does this do?
-    format.js
-  end
+
   
   #redirect_to :back
 end

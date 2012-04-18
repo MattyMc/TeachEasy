@@ -1,7 +1,10 @@
 <!-- DYNAMICALLY INSERTING CONTENT INTO NEWSFEED -->
 
-$("#teachables-list div:visible:last").hide(1000);
-$("#teachables-list").prepend("<div id='teachable-<%= @teachable.id %>' class='teachable'><%= @teachable.content %></div>");
+//HIDE THE LAST TEACHABLE
+$("#teachables-list div.teachable-outter:visible:last").hide(1000);
+
+//SLIDE IN THE NEW TEACHABLE
+$("<%= escape_javascript render @teachable %>").prependTo("#teachables-list").hide().slideDown('slow');
 
 //APPLY DRAG-DROP ABILITY TO THE NEWLY ADDED TEACHABLE
 applyDragDrop();
