@@ -5,10 +5,16 @@
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus eros, pulvinar sit amet dapibus ac, pharetra vitae lectus. Quisque volutpat eleifend mollis. In aliquet, ligula quis porta pharetra, felis risus varius nulla, in lobortis magna mauris vel nibh. Vestibulum dapibus condimentum ligula, non scelerisque neque sodales et. Suspendisse imperdiet feugiat interdum. Cras molestie sollicitudin imperdiet. Vestibulum tincidunt justo sed augue imperdiet cursus. Nulla volutpat, nisl at hendrerit imperdiet, mi augue porttitor ante, commodo feugiat quam sem vehicula velit. Ut ultrices elementum molestie. Aliquam in quam massa, id aliquam sapien.</p>
 
-<%= form_for @teachable, :remote=>true do |f| %>
-<%= f.text_field :content %>
-<%= f.submit %>
-<% end %>
+<div id="teachable-form" class="offset1 span6">
+	<%= form_for @teachable, :remote=>true do |f| %>
+		<div id="teachable-form-content-row" class="row">
+			<%= f.text_area :content, :rows=>"4", :placeholder=>"Something to share?" %>
+		</div>
+		<div id="teachable-form-submit-row" class="row span6">	
+			<%= f.submit :value=>"   Share!   " %>
+		</div>
+	<% end %>
+</div>
 
 <div id="teachables-list">
 	<%= render @last_20_teachables %>

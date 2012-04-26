@@ -1,6 +1,66 @@
 // Place all the styles related to the Teachables controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*****************************
+STYLING THE TEACHABLE-FORM
+*****************************/
+
+#teachable-form {
+	
+	border: 1px solid #999;
+	border-radius: 4px 0px 4px 4px;
+	border-color: #DDDDDD #DDDDDD #DDDDDD #DDDDDD;
+	
+	margin-bottom: 20px;
+}
+
+#teachable_content {
+
+}
+
+#teachable-form-content-row {
+
+	margin: 0px;
+}
+
+#teachable-form-content-row textarea {
+	margin: 0px;
+	border: none;
+	padding: 0px;
+	width: 100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	resize: none;
+	
+
+}
+
+textarea:focus, input:focus{
+    outline: none none;
+	box-shadow: none;
+}
+
+#teachable-form-submit-row {
+	margin: 0px;
+	border-top: 1px solid #DDDDDD;
+}
+
+#teachable-form-submit-row input {
+	margin: 0px;
+	float: right;
+	background: none;
+	border: none;
+}
+
+#teachable-form-submit-row input:first-child {
+	border-left: 1px solid #DDDDDD;
+	border-radius: 0px;
+}
+
+/*****************************
+STYLING THE TEACHABLES LIST
+*****************************/
+
 .teachable-inner {
 	padding: 7px 2px 3px 3px;
 	margin-bottom: 10px;

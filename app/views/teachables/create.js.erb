@@ -1,10 +1,12 @@
 <!-- DYNAMICALLY INSERTING CONTENT INTO NEWSFEED -->
 
 //HIDE THE LAST TEACHABLE
-$("#teachables-list div.teachable-outter:visible:last").hide(1000);
+$("#teachables-list div.teachable-outter:visible:last").hide();
 
-//SLIDE IN THE NEW TEACHABLE
-$("<%= escape_javascript render @teachable %>").prependTo("#teachables-list").hide().slideDown('slow');
+//FADE IN THE NEW TEACHABLE
+$("<%= escape_javascript render @teachable %>").prependTo("#teachables-list").css('display', 'none');
+
+$("#teachables-list div.teachable-outter:first").css('float','left').slideDown(2000);
 
 //APPLY DRAG-DROP ABILITY TO THE NEWLY ADDED TEACHABLE
 applyDragDrop();
